@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XayDung360 Study - Khóa học & Kiến thức chuyên sâu</title>
+    <!-- Liên kết CSS tại đây -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Sử dụng font Be Vietnam Pro làm font chữ mặc định, rất phù hợp cho tiếng Việt */
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        /* Gradient cho tiêu đề */
+        .text-gradient {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+            .floating-contact {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+            }
+
+            .contact-btn {
+            width: 48px;
+            height: 48px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            }
+
+            .contact-btn:hover {
+            transform: scale(1.1);
+            }
+
+            .contact-btn img {
+            width: 24px;
+            height: 24px;
+            }
+
+            .scroll-top-btn {
+            width: 36px;
+            height: 36px;
+            background-color: #1e3a8a;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            }
+
+            .scroll-top-btn:hover {
+            background-color: #0f172a;
+            }
+        
+
+    </style>
+    
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold text-gray-800">
+                XayDung360<span class="text-blue-600">.Study</span>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-6">
+                <a href="#courses" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Phần Mềm</a>
+                <a href="#articles" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Bài Viết</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Về Chúng Tôi</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium smooth-transition">Liên Hệ</a>
+            </nav>
+            <a href="#contact" class="hidden lg:block bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 smooth-transition shadow-lg shadow-blue-500/20">
+                Bắt Đầu Học
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-600" id="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden px-6 pb-4">
+             <a href="#courses" class="block py-2 text-gray-600 hover:text-blue-600">Phần Mềm</a>
+             <a href="#articles" class="block py-2 text-gray-600 hover:text-blue-600">Bài Viết</a>
+             <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">Về Chúng Tôi</a>
+             <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Liên Hệ</a>
+             <a href="#contact" class="block mt-2 w-full text-center bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700">Bắt Đầu Học</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    <span class="text-gradient">Làm Chủ Công Cụ,</span><br/>Nâng Tầm Sự Nghiệp
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Nền tảng học tập chuyên sâu dành cho kỹ sư xây dựng. Từ Etabs, AutoCAD, Revit đến Civil 3D, chúng tôi cung cấp kiến thức THỰC CHIẾN, HOÀN TOÀN MIỄN PHÍ để bạn tự tin chinh phục mọi dự án.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="#courses" class="bg-blue-600 text-white font-bold px-8 py-3 rounded-lg hover:bg-blue-700 smooth-transition text-lg shadow-lg shadow-blue-500/30">
+                        Xem Khóa Học
+                    </a>
+                    <a href="#articles" class="bg-gray-200 text-gray-800 font-bold px-8 py-3 rounded-lg hover:bg-gray-300 smooth-transition text-lg">
+                        Đọc Bài Viết
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Thành Thạo Các Phần Mềm Thiết Yếu</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Các khóa học được thiết kế bài bản, từ cơ bản đến nâng cao, giúp bạn áp dụng ngay vào công việc.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card: Etabs -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 smooth-transition border-t-4 border-blue-500">
+                        <h3 class="text-xl font-bold mb-2">Etabs</h3>
+                        <p class="text-gray-600 text-sm">Phân tích và thiết kế kết cấu nhà cao tầng chuyên nghiệp.</p>
+                    </div>
+                    <!-- Card: AutoCAD -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 smooth-transition border-t-4 border-red-500">
+                        <h3 class="text-xl font-bold mb-2">AutoCAD</h3>
+                        <p class="text-gray-600 text-sm">Triển khai bản vẽ kỹ thuật 2D & 3D chính xác và hiệu quả.</p>
+                    </div>
+                    <!-- Card: Revit -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 smooth-transition border-t-4 border-green-500">
+                        <h3 class="text-xl font-bold mb-2">Revit</h3>
+                        <p class="text-gray-600 text-sm">Làm chủ quy trình BIM, mô hình hóa thông tin công trình.</p>
+                    </div>
+                    <!-- Card: Civil 3D -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 smooth-transition border-t-4 border-yellow-500">
+                        <h3 class="text-xl font-bold mb-2">Civil 3D</h3>
+                        <p class="text-gray-600 text-sm">Thiết kế hạ tầng kỹ thuật, giao thông, san lấp mặt bằng.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles Section -->
+        <section id="articles" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Bài Viết & Thủ Thuật Mới Nhất</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Cập nhật kiến thức, mẹo và các phân tích chuyên sâu từ chuyên gia.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Article Card 1 -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden flex flex-col group">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Móng+Nhà" alt="Bài viết về móng nhà" class="w-full h-48 object-cover group-hover:scale-105 smooth-transition">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-sm font-semibold text-blue-600">Kết Cấu</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3 flex-grow">Hướng dẫn bố trí thép móng băng cho nhà dân dụng</h3>
+                            <a href="#" class="font-semibold text-blue-600 hover:text-blue-800 self-start">Xem chi tiết &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Article Card 2 -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden flex flex-col group">
+                        <img src="https://placehold.co/600x400/ef4444/ffffff?text=AutoCAD" alt="Thủ thuật AutoCAD" class="w-full h-48 object-cover group-hover:scale-105 smooth-transition">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-sm font-semibold text-red-600">AutoCAD</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3 flex-grow">5 Lệnh XREF trong AutoCAD mà kỹ sư nào cũng phải biết</h3>
+                            <a href="#" class="font-semibold text-blue-600 hover:text-blue-800 self-start">Xem chi tiết &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Article Card 3 -->
+                    <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden flex flex-col group">
+                        <img src="https://placehold.co/600x400/22c55e/ffffff?text=BIM" alt="Quy trình BIM" class="w-full h-48 object-cover group-hover:scale-105 smooth-transition">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <span class="text-sm font-semibold text-green-600">BIM & Revit</span>
+                            <h3 class="text-xl font-bold mt-2 mb-3 flex-grow">BIM là gì? Tại sao Revit là tương lai của ngành xây dựng?</h3>
+                            <a href="#" class="font-semibold text-blue-600 hover:text-blue-800 self-start">Xem chi tiết &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- About -->
+                <div class="col-span-1 lg:col-span-2">
+                    <h3 class="text-xl font-bold text-white mb-4">
+                        XayDung360<span class="text-blue-500">.Study</span>
+                    </h3>
+                    <p class="text-gray-400 max-w-sm">Trang web chia sẻ kiến thức và các khóa học thực chiến về phần mềm kỹ thuật xây dựng, đồng hành cùng kỹ sư Việt Nam.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Khám Phá</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#courses" class="hover:text-blue-500 smooth-transition">Khóa Học</a></li>
+                        <li><a href="#articles" class="hover:text-blue-500 smooth-transition">Bài Viết</a></li>
+                        <li><a href="#about" class="hover:text-blue-500 smooth-transition">Về Chúng Tôi</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Liên Hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: xaydung360.study@gmail.com <a href="mailto:xaydung360.study@gmail.com" class="hover:text-blue-500"></a></li>
+                        <li>Hotline: 077.963.1215</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; 2025 XayDung360 Study. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript cho menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+        <div class="floating-contact">
+            <a href="tel:0779631215" class="contact-btn phone" title="Gọi điện">
+            <img src="phone.png" alt="phone">
+            </a>
+            <a href="https://zalo.me/0779631215" class="contact-btn zalo" title="Zalo">
+            <img src="zalo.png" alt="Zalo">
+            </a>
+            <a href="https://www.facebook.com/hungdrakid/" class="contact-btn facebook" title="Facebook">
+            <img src="facebook.png" alt="Facebook">
+            </a>
+            <button onclick="scrollToTop()" class="scroll-top-btn" title="Lên đầu trang">↑</button>
+        </div>
+</body>
+</html>
