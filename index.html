@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xaydung360_Official.vn - Cổng thông tin kiến thức xây dựng</title>
+    <!-- DÒNG MÃ MỚI: Thêm Favicon (logo trên tab) -->
+    <link rel="icon" href="logo.png" type="png">
+        
+    <!-- Tích hợp Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tích hợp Font Google (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Cấu hình Tailwind với bảng màu tươi sáng -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#3B82F6', // Xanh sáng
+                        'brand-dark': '#334155', // Xám đậm mềm mại
+                        'brand-light': '#F8F9FA', // Nền trắng ngà
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS tùy chỉnh cho hiệu ứng và ảnh nền nhà ấm áp -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            /* Ảnh nền mới: Ngôi nhà hiện đại với ánh đèn ấm cúng */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-brand-light font-sans">
+
+    <!-- Header - Phần đầu trang -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- PHẦN LOGO ĐÃ ĐƯỢC CẬP NHẬT VỚI BIỂU TƯỢNG MỚI -->
+            <div class="flex items-center space-x-2">
+                <div class="h-8 flex items-center justify-center">
+                    <svg class="h-full w-auto text-brand-blue" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 21h4V10H4v11zm5 0h4V3H9v18zm5 0h4V6h-4v15z"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <a href="#" class="block text-gray-600 hover:text-brand-blue font-medium transition duration-100 text-sm">
+                        mylife_mystyle
+                    </a>
+                    <a href="#" class="block text-2xl font-bold text-brand-blue -mt-2"> xaydung360°_official
+                    </a>
+                </div>
+            </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#chuyen-muc" class="text-gray-600 hover:text-brand-blue font-medium transition duration-300">Kiến thức</a>
+                <a href="#" class="text-gray-600 hover:text-brand-blue font-medium transition duration-300">Dự án</a>
+                <a href="#" class="text-gray-600 hover:text-brand-blue font-medium transition duration-300">Vật liệu</a>
+                <a href="#" class="text-gray-600 hover:text-brand-blue font-medium transition duration-300">Hỏi & Đáp</a>
+                <a href="#" class="text-gray-600 hover:text-brand-blue font-medium transition duration-300">Giới thiệu</a>
+            </div>
+            <a href="#" class="hidden md:block bg-brand-blue text-white font-bold py-2 px-5 rounded-full hover:bg-blue-600 transition duration-300 shadow-md hover:shadow-lg">
+                Liên hệ
+            </a>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content - Nội dung chính -->
+    <main>
+        <!-- Hero Section - Banner chính -->
+        <section class="hero-section text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Nâng tầm không gian sống của bạn</h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Khám phá kho tàng kiến thức xây dựng, từ thiết kế ý tưởng đến hoàn thiện thi công, được chia sẻ bởi các chuyên gia hàng đầu.</p>
+                <a href="#" class="bg-white text-brand-blue font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300 shadow-lg">
+                    Bắt đầu tìm hiểu
+                </a>
+            </div>
+        </section>
+
+        <!-- Chuyên mục chính -->
+        <section id="chuyen-muc" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Khám phá các chuyên mục</h2>
+                    <p class="text-gray-500 mt-2">Kiến thức được hệ thống hóa để bạn dễ dàng tra cứu.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Chuyên mục 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover-effect">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Kiến trúc & Thiết kế</h3>
+                        <p class="text-gray-500">Xu hướng, phong cách và các giải pháp thiết kế thông minh.</p>
+                    </div>
+                    <!-- Chuyên mục 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover-effect">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Kỹ thuật Thi công</h3>
+                        <p class="text-gray-500">Quy trình, tiêu chuẩn và các lưu ý quan trọng trong quá trình thi công.</p>
+                    </div>
+                    <!-- Chuyên mục 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover-effect">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Vật liệu Xây dựng</h3>
+                        <p class="text-gray-500">Đánh giá, so sánh và cách lựa chọn vật liệu phù hợp, tiết kiệm.</p>
+                    </div>
+                    <!-- Chuyên mục 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover-effect">
+                        <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-2">Pháp lý & Thủ tục</h3>
+                        <p class="text-gray-500">Hướng dẫn các thủ tục, giấy tờ cần thiết để việc xây dựng thuận lợi.</p>
+                    </div>
+                    <!-- Chuyên mục 5: Study (Thẻ mới) -->
+                    <a href="study.html" class="block"> <!-- Thêm thẻ a và đặt href -->
+                         <div class="bg-white p-8 rounded-xl shadow-md text-center card-hover-effect h-full">
+                            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                                <svg class="w-10 h-10 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-dark mb-2">Góc học tập</h3>
+                            <p class="text-gray-500">Tài liệu, đồ án mẫu và kiến thức chuyên sâu cho sinh viên.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bài viết mới nhất -->
+        <section class="bg-white py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Kiến thức mới cập nhật</h2>
+                    <p class="text-gray-500 mt-2">Những bài viết chuyên sâu và hữu ích nhất được chọn lọc cho bạn.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bài viết mẫu 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover-effect border border-gray-200/80">
+                        <img src="https://placehold.co/600x400/A3BFFA/1a202c?text=Chọn+thầu" alt="Chọn nhà thầu" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-brand-blue font-semibold">Cẩm nang gia chủ</span>
+                            <h3 class="font-bold text-xl my-2 text-brand-dark">10 sai lầm cần tránh khi ký hợp đồng thi công</h3>
+                            <p class="text-gray-600 text-base mb-4">Một hợp đồng chặt chẽ sẽ bảo vệ quyền lợi của bạn. Hãy xem xét kỹ những điều khoản này...</p>
+                            <a href="#" class="font-semibold text-brand-blue hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Bài viết mẫu 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover-effect border border-gray-200/80">
+                        <img src="https://placehold.co/600x400/FBBF24/1a202c?text=Vật+liệu" alt="Vật liệu xanh" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-brand-blue font-semibold">Vật liệu</span>
+                            <h3 class="font-bold text-xl my-2 text-brand-dark">Xu hướng vật liệu xanh cho ngôi nhà bền vững</h3>
+                            <p class="text-gray-600 text-base mb-4">Tìm hiểu về các loại vật liệu thân thiện môi trường, giúp tiết kiệm năng lượng và chi phí vận hành.</p>
+                            <a href="#" class="font-semibold text-brand-blue hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Bài viết mẫu 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover-effect border border-gray-200/80">
+                        <img src="https://placehold.co/600x400/A7F3D0/1a202c?text=Thiết+kế" alt="Thiết kế không gian nhỏ" class="w-full h-56 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-brand-blue font-semibold">Thiết kế</span>
+                            <h3 class="font-bold text-xl my-2 text-brand-dark">5 mẹo "ăn gian" diện tích cho căn hộ nhỏ</h3>
+                            <p class="text-gray-600 text-base mb-4">Không gian sống của bạn sẽ trở nên rộng rãi và thoáng đãng hơn với những thủ thuật thiết kế đơn giản.</p>
+                            <a href="#" class="font-semibold text-brand-blue hover:underline">Đọc tiếp &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Đăng ký nhận tin -->
+        <section class="bg-gray-100">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h2 class="text-3xl font-bold text-brand-dark">Trở thành người đọc thông thái</h2>
+                <p class="text-gray-600 mt-2 mb-6">Đừng bỏ lỡ bất kỳ kiến thức quan trọng nào. Đăng ký nhận bản tin từ chúng tôi.</p>
+                <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+                    <input type="email" placeholder="Nhập địa chỉ email của bạn" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-brand-blue" required>
+                    <button type="submit" class="bg-brand-blue text-white font-bold py-3 px-6 rounded-md hover:bg-blue-600 transition duration-300">Đăng ký ngay</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Phần chân trang -->
+    <footer class="bg-brand-dark text-gray-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Cột 1: Giới thiệu -->
+                <div class="md:col-span-1">
+                    <h3 class="text-xl font-bold text-white mb-4">xaydung360°</h3>
+                    <p class="text-gray-400">Cổng thông tin chia sẻ kiến thức xây dựng toàn diện, uy tín và phi lợi nhuận vì cộng đồng.</p>
+                </div>
+                <!-- Cột 2: Chuyên mục -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Chuyên mục</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">Thiết kế</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Thi công</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Vật liệu</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Pháp lý</a></li>
+                    </ul>
+                </div>
+                <!-- Cột 3: Về chúng tôi -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Về chúng tôi</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">Giới thiệu</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Fanpage:</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Hotline/Zalo: 0779631215(Hưng)</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Email:</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Làm việc:8h-22h (Thứ 2 đến Chủ nhật)</a></li>
+                    </ul>
+                </div>
+                <!-- Cột 4: Mạng xã hội -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Theo dõi chúng tôi</h4>
+                    <div class="flex space-x-4">
+                        <!-- Facebook -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+                        </svg>
+                        </a>
+
+                        <!-- Twitter -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
+                        </svg>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 112.5 0 1.25 1.25 0 01-2.5 0z"/>
+                        </svg>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="TikTok">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12.75 2v12.25a2.75 2.75 0 11-2.75-2.75H10a4 4 0 100 8 4 4 0 004-4V8.8a6.012 6.012 0 003 0V6.5a4.5 4.5 0 01-3-1V2h-1.25z"/>
+                        </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+                        
